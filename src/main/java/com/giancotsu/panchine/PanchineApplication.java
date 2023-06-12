@@ -13,8 +13,9 @@ import org.springframework.beans.factory.annotation.Value;
 
 @SpringBootApplication
 @PropertySource("classpath:application.properties")
-public class PanchineApplication implements ApplicationRunner {
+public class PanchineApplication {
 
+    /*
     private final UserController userController;
     private final UserService userService;
 
@@ -29,10 +30,13 @@ public class PanchineApplication implements ApplicationRunner {
         this.userService = userService;
     }
 
+     */
+
     public static void main(String[] args) {
         SpringApplication.run(PanchineApplication.class, args);
     }
 
+    /*
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
@@ -43,4 +47,5 @@ public class PanchineApplication implements ApplicationRunner {
 
         userService.save(adminUser);
     }
+     */
 }
