@@ -30,7 +30,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     private final JwtAthFilter jwtAuthFilter;
-    //private final UserRepository userRepository;
     private final UserService userService;
 
     @Bean
@@ -76,18 +75,7 @@ public class SecurityConfig {
         return new UserDetailsService() {
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                //return userRepository.findUserByEmail(email);
                 return userService.findByUsername(username);
-
-                /*
-                UserDetails user = userRepository.findUserByUsername(username);
-
-                if (user == null){
-                    throw new UsernameNotFoundException("Bad credentialssssss");
-                }
-                return new User(user.getUsername(), user.getPassword(), user.getAuthorities());
-
-                 */
             }
         };
     }

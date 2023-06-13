@@ -1,15 +1,8 @@
 package com.giancotsu.panchine;
 
-import com.giancotsu.panchine.controller.UserController;
-import com.giancotsu.panchine.dto.UserDTO;
-import com.giancotsu.panchine.model.UserEntity;
-import com.giancotsu.panchine.service.UserService;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.beans.factory.annotation.Value;
 
 @SpringBootApplication
 @PropertySource("classpath:application.properties")

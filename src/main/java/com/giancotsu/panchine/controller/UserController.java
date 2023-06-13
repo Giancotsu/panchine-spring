@@ -12,16 +12,14 @@ import lombok.extern.java.Log;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Collections;
 
 
 @RestController
 @RequestMapping("/api/user")
-@CrossOrigin(origins="http://localhost:4200" )
+@CrossOrigin(origins="*" )
 @RequiredArgsConstructor
 @Log
 public class UserController {
